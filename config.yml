@@ -45,47 +45,6 @@
           - name: "Docs (Wiki)"
             url: https://github.com/adityatelange/hugo-PaperMod/wiki/
 
-    fr:
-      languageName: "French"
-      weight: 2
-      title: PaperModL2
-      taxonomies:
-        category: FRcategories
-        tag: FRtags
-        series: FRseries
-      menu:
-        main:
-          - name: Archive
-            url: archives/
-            weight: 5
-          - name: FRTags
-            url: frtags
-            weight: 10
-          - name: FRCategories
-            url: frcategories
-            weight: 10
-          - name: FRSeries
-            url: frseries
-            weight: 10
-          - name: External
-            url: "https://github.com/adityatelange/hugo-PaperMod/wiki/Features#profile-mode"
-
-      # custom params for each language should be under [langcode].parms - hugo v0.120.0
-      params:
-        languageAltTitle: French
-        profileMode:
-          enabled: true
-          title: PaperMod
-          imageUrl: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=200&h=200"
-          imageTitle: ProfileMode image
-          # imageWidth: 120
-          # imageHeight: 120
-          subtitle: "☄️ Fast | ☁️ Fluent | 🌙 Smooth | 📱 Responsive"
-          buttons:
-            - name: Blog
-              url: posts
-            - name: Profile Mode
-              url: https://github.com/adityatelange/hugo-PaperMod/wiki/Features#profile-mode
 
 
   outputFormats:
@@ -104,8 +63,8 @@
 
   params:
     env: production # to enable google analytics, opengraph, twitter-cards and schema.
-    description: "Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod"
-    author: Theme PaperMod
+    description: "System Design - High level articles and explanations"
+    author: System Design Contributors
     # author: ["Me", "You"] # multiple authors
 
     defaultTheme: auto
@@ -126,7 +85,7 @@
 
     profileMode:
       enabled: false
-      title: PaperMod
+      title: System Design
       imageUrl: "#"
       imageTitle: my image
       # imageWidth: 120
@@ -138,20 +97,19 @@
           url: tags
 
     homeInfoParams:
-      Title: "PaperMod's Demo"
+      Title: "System Design Articles"
       Content: |
-        A clean, fast, and responsive Hugo theme built for a polished reading experience. [Read more..](/about/)
-        - Lightweight by design, with a modern layout that keeps your content front and center.
-        - Explore the [Docs (Wiki)](https://github.com/adityatelange/hugo-PaperMod/wiki/) to learn more about features and configuration.
-        - Support the project on [GitHub](https://github.com/adityatelange/hugo-PaperMod) and share it with others who love minimalistic designs.
-        - PaperMod is inspired by the [Paper](https://github.com/nanxiaobei/hugo-paper/tree/4330c8b12aa48bfdecbcad6ad66145f679a430b3) theme.
+        High-level articles and explanations covering fundamental concepts of scalable systems.
+        - Explore deep dives into [Load Balancers](/posts/load-balancers-high-level/), [Databases](/posts/databases-high-level/), and more.
+        - Designed for engineers preparing for interviews or building large-scale applications.
+        - Contribute or suggest changes on [GitHub](https://github.com/swkanwar/system-design-blog).
 
     socialIcons:
       - name: github
         title: View Source on Github
         url: "https://github.com/swkanwar/system-design-blog"
       - name: X
-        title: Share PaperMod on X/Twitter
+        title: Share System Design on X/Twitter
         url: "https://x.com/intent/tweet/?text=Checkout%20System%20Design%20Explained.&url=https://github.com/swkanwar/system-design-blog&hashtags=SystemDesign,InterviewPrep"
 
     editPost:
