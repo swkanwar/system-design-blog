@@ -150,9 +150,6 @@
       - name: github
         title: View Source on Github
         url: "https://github.com/swkanwar/system-design-blog"
-      - name: Discord
-        title: Join discord community
-        url: "https://discord.gg/ahpmTvhVmp"
       - name: X
         title: Share PaperMod on X/Twitter
         url: "https://x.com/intent/tweet/?text=Checkout%20System%20Design%20Explained.&url=https://github.com/swkanwar/system-design-blog&hashtags=SystemDesign,InterviewPrep"
