@@ -1,7 +1,7 @@
   baseURL: 'https://swkanwar.github.io/system-design-blog/'
   title: 'System Design'
   copyright: "© [System Design Contributors](https://github.com/swkanwar/system-design-blog/)"
-  theme: [hugo-PaperMod]
+  theme: [PaperMod]
 
   enableInlineShortcodes: true
   enableRobotsTXT: true
