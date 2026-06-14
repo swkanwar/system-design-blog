@@ -6,8 +6,6 @@ title = 'Databases High Level'
 
 # Databases
 
-![Databases](../assets/databases.png)
-
 ## Types of Databases
 
 ### Relational (Default)
@@ -56,6 +54,7 @@ Not necessarily needs “De normalized” data, but traditionally document DB ar
 ```
 
 ### Key-Value DB
+![Databases](../assets/databases/databases.jpg)
 Examples: Redis and DynamoDB (DynamoDB is both key-value and Document DB).
 
 ### Wide-column DB
@@ -90,15 +89,19 @@ Ask yourself what query the use-case needs to run then add indexes for the "Wher
 * Add index for "sort" columns
 
 ## Scaling and Sharding
+![Sharding](../assets/databases/sharding.jpg)
 
 Shard by primary access pattern. Avoid cross-join sharding by keeping related data together. If Posts is sharded by postID, shard Comments also by postID not commentID.
 
 ### Range based sharding
+![Range-based](../assets/databases/range-based.jpg)
 Leads to un-even distribution, in the beginning only Shard1 will be busy as mono-tonically increasing user_ids. Hence Industry default is Hash based sharding.
 
 ### Hash based sharding
+![Hash-based](../assets/databases/consistent-hashing.jpg)
 Instead of directly using user_id, compute the Hash of user_id and then determine Shard by applying modulo.
 The issue is if a new DB shard gets added then almost everything needs to be re-shuffled as mod3 and mod4 results in a different Shard number for almost everything (except numbers divisible by both 3,4), and this is expensive. So use Consistent hashing where all the Hash keys are distributed on a circle and nodes are also evenly distributed on the Circle, when a new node gets added all the nodes shift a little causing only few data shifts rather than everything. Consistent hashing has a concept of VIrtual Nodes to minimize this shift even further.
 
 ### Directory-based sharding
+![Directory-based](../assets/databases/directory-based.jpg)
 Instead of using a formula to decide where data lives, use a look up table. This is very flexible but creates a extra latency and single point of failure because of where the directory is being maintained.
