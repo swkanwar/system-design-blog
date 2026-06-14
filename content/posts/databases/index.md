@@ -6,6 +6,8 @@ title = 'Databases High Level'
 
 # Databases
 
+![Databases](../assets/databases.png)
+
 ## Types of Databases
 
 ### Relational (Default)
